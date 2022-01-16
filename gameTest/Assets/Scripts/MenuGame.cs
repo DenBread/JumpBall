@@ -7,6 +7,7 @@ public class MenuGame : MonoBehaviour
 {
     public void Pause()
     {
+        
         Time.timeScale = 0f;
     }
 

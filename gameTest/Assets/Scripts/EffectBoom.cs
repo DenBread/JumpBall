@@ -5,6 +5,6 @@ using UnityEngine;
 public class EffectBoom : MonoBehaviour
 {
     public GameObject effectBoom;
-
+    
 
 }

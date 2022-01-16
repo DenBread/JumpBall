@@ -13,14 +13,17 @@ public class Move : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
+        
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private void Update()
     {
         keySpace = Input.GetKeyDown(KeyCode.Space);
         //target.transform.RotateAround(target.transform.position, Vector3.forward, 20*Time.deltaTime);
 
-        /// рисуем в player mode линию
+        /// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ player mode пїЅпїЅпїЅпїЅпїЅ
         Quaternion rotation = Quaternion.AngleAxis(45, gameObject.transform.right);
         Debug.DrawRay(transform.position, rotation * transform.forward * 3f, Color.red);
         ///
@@ -28,9 +31,7 @@ public class Move : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && isGround && isGame)
         {
-            Ray2D ray2D = In;
-
-            Debug.Log("Тачит");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅ");
             keySpace = true;
         }
         else
@@ -39,6 +40,7 @@ public class Move : MonoBehaviour
         }
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private void FixedUpdate()
     {
         if (keySpace)
